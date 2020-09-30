@@ -1,21 +1,23 @@
 package scrap.heap.model;
 
-public class Balloon {
+public class Balloon implements Product {
     private final Color color;
     private final String material;
-    private final String number;
 
-    public Balloon(Color color, String material, String number) {
+    public Balloon(Color color, String material) {
         this.color = color;
         this.material = material;
-        this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "Balloon[" + color + ", " + material + "]";
     }
 
     public static class Builder {
 
         private Color color;
         private String material;
-        private String number;
 
         public Builder color(Color color) {
             this.color = color;
@@ -27,13 +29,8 @@ public class Balloon {
             return this;
         }
 
-        public Builder number(String number) {
-            this.number = number;
-            return this;
-        }
-
         public Balloon build() {
-            return new Balloon(color, material, number);
+            return new Balloon(color, material);
         }
     }
 }

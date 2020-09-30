@@ -1,18 +1,23 @@
 package scrap.heap.model;
 
-public class Cake {
+public class Cake implements Product {
     private final String flavor;
-    private final String frostingFlovor;
+    private final String frostingFlavor;
     private final String shape;
     private final String size;
     private final String color;
 
-    public Cake(String flavor, String frostingFlovor, String shape, String size, String color) {
+    public Cake(String flavor, String frostingFlavor, String shape, String size, String color) {
         this.flavor = flavor;
-        this.frostingFlovor = frostingFlovor;
+        this.frostingFlavor = frostingFlavor;
         this.shape = shape;
         this.size = size;
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Cake[" + flavor + ", " + frostingFlavor + ", " + shape + ", " + size + ", " + color + "]";
     }
 
     public static class Builder {
