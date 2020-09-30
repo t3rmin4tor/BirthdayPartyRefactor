@@ -13,7 +13,7 @@ public class App {
         order(Color.YELLOW, "mylar", 4, "vanilla", "vanilla", "square", "small", "yellow");
     }
 
-    private static void order(Color color, String material, int numberOfBalloons, String flavor, String frostingFlovor, String shape, String size, String cakeColor) {
+    public static String order(Color color, String material, int numberOfBalloons, String flavor, String frostingFlovor, String shape, String size, String cakeColor) {
         Balloon balloonOne = new Balloon.Builder()
                 .color(color)
                 .material(material)
@@ -29,5 +29,6 @@ public class App {
                 .add(balloonOne, numberOfBalloons)
                 .add(cakeOne, 1);
         System.out.println(order);
+        return order.toString();
     }
 }
