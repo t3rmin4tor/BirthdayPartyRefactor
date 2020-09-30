@@ -14,11 +14,11 @@ public class App {
     }
 
     public static String order(Color color, String material, int numberOfBalloons, String flavor, String frostingFlovor, String shape, String size, String cakeColor) {
-        Balloon balloonOne = new Balloon.Builder()
+        Balloon balloon = new Balloon.Builder()
                 .color(color)
                 .material(material)
                 .build();
-        Cake cakeOne = new Cake.Builder()
+        Cake cake = new Cake.Builder()
                 .flavor(flavor)
                 .frostingFlovor(frostingFlovor)
                 .shape(shape)
@@ -26,8 +26,8 @@ public class App {
                 .color(cakeColor)
                 .build();
         Order order = new Order()
-                .add(balloonOne, numberOfBalloons)
-                .add(cakeOne, 1);
+                .add(balloon, numberOfBalloons)
+                .add(cake, 1);
         System.out.println(order);
         return order.toString();
     }

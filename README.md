@@ -11,3 +11,12 @@ functionality (unless you consider tests additional functionality), we're just c
 Running the application: `gradle build test run`
 
 All output is written to the console.
+
+## Changes made 
+
+* Added concept of Order and Products.
+* Product can be added into Order with units
+* Two Product types supported Cake and Balloon
+* Added Builders to create Cake and Balloon.
+* Introduce enum Color to limit the option available (other parameter can also be enumified)
+* 
